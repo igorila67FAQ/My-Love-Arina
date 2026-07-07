@@ -1,0 +1,909 @@
+/* =========================
+   ОСНОВНЫЕ НАСТРОЙКИ
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #080611;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+
+h1,
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+}
+
+
+p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+
+
+/* =========================
+   ЗВЕЗДНЫЙ ФОН
+========================= */
+
+.stars {
+
+    position: fixed;
+    inset: 0;
+
+    background:
+    radial-gradient(circle at 20% 20%, white 1px, transparent 2px),
+    radial-gradient(circle at 80% 30%, white 1px, transparent 2px),
+    radial-gradient(circle at 40% 70%, white 1px, transparent 2px),
+    radial-gradient(circle at 70% 80%, white 1px, transparent 2px);
+
+    background-size: 180px 180px;
+
+    opacity: .4;
+
+    animation: starsMove 20s linear infinite;
+
+    z-index: -2;
+}
+
+
+@keyframes starsMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-200px);
+    }
+
+}
+
+
+
+
+
+
+/* =========================
+   СЕРДЕЧКИ
+========================= */
+
+
+.hearts {
+
+    position: fixed;
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:10;
+
+}
+
+
+
+.heart {
+
+    position:absolute;
+
+    color:#ff6b9a;
+
+    animation:
+    fly 8s linear infinite;
+
+    opacity:.7;
+
+}
+
+
+@keyframes fly {
+
+    from {
+
+        transform:
+        translateY(100vh)
+        scale(.5);
+
+    }
+
+
+    to {
+
+        transform:
+        translateY(-20vh)
+        scale(1.5);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero {
+
+    height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
+
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.7)
+    ),
+
+    url("images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+
+}
+
+
+
+.hero-content {
+
+    animation:
+    fadeUp 2s ease;
+
+}
+
+
+.small-title {
+
+    font-size:32px;
+
+    color:#ffd1df;
+
+}
+
+
+
+.hero h1 {
+
+    font-size:120px;
+
+    margin:20px 0;
+
+}
+
+
+
+.subtitle {
+
+    max-width:600px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+button {
+
+
+    margin-top:40px;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    border:none;
+
+    background:
+    linear-gradient(
+    45deg,
+    #ff4f81,
+    #ff9ab8
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+
+    box-shadow:
+    0 0 30px #ff5b91;
+
+
+    transition:.4s;
+
+}
+
+
+button:hover {
+
+    transform:
+    scale(1.1);
+
+}
+
+
+
+
+
+/* =========================
+   СЕКЦИИ
+========================= */
+
+
+section {
+
+    padding:100px 20px;
+
+}
+
+
+.container {
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+.love-section {
+
+    text-align:center;
+
+}
+
+
+
+.love-section h2,
+.gallery h2,
+.reasons h2,
+.letter h2 {
+
+    font-size:70px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+
+/* =========================
+   ГАЛЕРЕЯ
+========================= */
+
+
+.photo-grid {
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.photo-card {
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:#ffffff15;
+
+    padding:10px;
+
+    backdrop-filter:blur(10px);
+
+
+    transition:.5s;
+
+}
+
+
+.photo-card:hover {
+
+    transform:
+    translateY(-15px)
+    scale(1.03);
+
+}
+
+
+
+.photo-card img {
+
+    width:100%;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   КАРТОЧКИ
+========================= */
+
+
+.cards {
+
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+
+}
+
+
+.card {
+
+    width:220px;
+
+    padding:40px 20px;
+
+    background:#ffffff12;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(15px);
+
+
+    font-size:20px;
+
+
+    transition:.4s;
+
+}
+
+
+.card:hover {
+
+    transform:
+    scale(1.1);
+
+    box-shadow:
+    0 0 30px #ff719d;
+
+}
+
+
+
+
+
+
+/* =========================
+   ПИСЬМО
+========================= */
+
+
+.letter {
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.letter-box {
+
+    max-width:800px;
+
+    padding:50px;
+
+    border-radius:35px;
+
+    background:#ffffff10;
+
+    backdrop-filter:blur(20px);
+
+    text-align:center;
+
+
+    box-shadow:
+    0 0 40px #ff709d30;
+
+}
+
+
+
+
+
+
+/* =========================
+   ФИНАЛ
+========================= */
+
+
+.final {
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+
+.big-heart {
+
+
+    font-size:160px;
+
+
+    animation:
+
+    heartbeat 1.5s infinite;
+
+
+}
+
+
+
+@keyframes heartbeat {
+
+
+    0% {
+
+        transform:scale(1);
+
+    }
+
+
+    50% {
+
+        transform:scale(1.2);
+
+    }
+
+
+    100% {
+
+        transform:scale(1);
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =========================
+   АНИМАЦИИ
+========================= */
+
+
+@keyframes fadeUp {
+
+
+from {
+
+    opacity:0;
+
+    transform:
+    translateY(50px);
+
+}
+
+
+to {
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+/* =========================
+   ТЕЛЕФОН
+========================= */
+
+
+@media(max-width:700px){
+
+
+.hero h1 {
+
+    font-size:80px;
+
+}
+
+
+
+.small-title {
+
+    font-size:25px;
+
+}
+
+
+
+.love-section h2,
+.gallery h2,
+.reasons h2,
+.letter h2 {
+
+    font-size:50px;
+
+}
+
+
+
+.letter-box {
+
+    padding:30px;
+
+}
+
+
+
+}
+
+/* =========================
+   СЧЕТЧИК
+========================= */
+
+
+.timer {
+
+    text-align:center;
+
+}
+
+
+.time-box {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+
+
+.time-box div {
+
+    width:130px;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:#ffffff12;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+.time-box span {
+
+    display:block;
+
+    font-size:45px;
+
+    font-weight:bold;
+
+    color:#ff9bbb;
+
+}
+
+
+
+.time-box small {
+
+    font-size:16px;
+
+}
+
+
+
+
+
+/* музыка */
+
+.music-button {
+
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+
+z-index:20;
+
+
+padding:15px 25px;
+
+
+border-radius:50px;
+
+
+background:#ffffff20;
+
+
+backdrop-filter:blur(15px);
+
+
+color:white;
+
+
+border:1px solid #ffffff30;
+
+
+cursor:pointer;
+
+
+}
+
+/* =========================
+ PRELOADER
+========================= */
+
+
+.preloader {
+
+position:fixed;
+
+inset:0;
+
+background:#080611;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+transition:1s;
+
+}
+
+
+
+.loader-heart {
+
+font-size:120px;
+
+animation:heartbeat 1s infinite;
+
+}
+
+
+
+.preloader h2 {
+
+font-size:60px;
+
+color:#ffb6cb;
+
+}
+
+
+
+
+/* =========================
+ ПИСЬМО
+========================= */
+
+
+.envelope {
+
+font-size:100px;
+
+cursor:pointer;
+
+animation:floating 2s infinite;
+
+}
+
+
+@keyframes floating {
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+
+
+
+.letter-content {
+
+display:none;
+
+animation:fadeUp 1s;
+
+}
+
+
+
+.letter-box.open .envelope {
+
+display:none;
+
+}
+
+
+
+.letter-box.open .letter-content {
+
+display:block;
+
+}
+
+
+
+
+
+
+
+/* =========================
+ POLAROID
+========================= */
+
+
+.photo-card:nth-child(odd){
+
+transform:rotate(-3deg);
+
+}
+
+
+.photo-card:nth-child(even){
+
+transform:rotate(3deg);
+
+}
+
+
+
+.photo-card:hover{
+
+transform:
+
+rotate(0deg)
+
+scale(1.08);
+
+}
+
+
+
+
+/* =========================
+ ФИНАЛЬНАЯ КНОПКА
+========================= */
+
+
+.final button {
+
+margin-top:30px;
+
+}
+
+
+
+.magic-heart {
+
+
+font-size:200px;
+
+cursor:pointer;
+
+transition:.5s;
+
+
+}
+
+
+
+.magic-heart:hover {
+
+
+transform:
+
+scale(1.2);
+
+
+filter:
+
+drop-shadow(0 0 40px pink);
+
+
+}
